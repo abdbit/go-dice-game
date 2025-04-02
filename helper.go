@@ -3,7 +3,19 @@ package main
 import (
 	"fmt"
 	"math/rand/v2"
+	"time"
 )
+
+// var declaration ✅
+// basic types ✅
+// printing ✅
+// if else ✅
+// for ✅
+// while ✅
+// func ✅
+// user input ✅
+// random numbers ✅
+// sleep✅
 
 func helper() {
 	fmt.Println("Hello World")
@@ -66,6 +78,8 @@ func helper() {
 	fmt.Println("Your name is: " + userInput)
 
 	fmt.Printf("Random number: %d", rand.IntN(6))
+
+	time.Sleep(5 * time.Second)
 }
 
 func mySumFunction(numberOne int, numberTwo int) int {
@@ -90,12 +104,3 @@ func input(prompt string) string {
 
 	return userInput
 }
-
-// var declaration ✅
-// basic types ✅
-// printing ✅
-// if else ✅
-// for ✅
-// while ✅
-// func ✅
-// user input ✅
