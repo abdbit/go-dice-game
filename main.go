@@ -39,6 +39,8 @@ func main() {
 				} else {
 					fmt.Println("It's a draw :(")
 				}
+
+				break
 			}
 
 			currentTurns = currentTurns + 1
