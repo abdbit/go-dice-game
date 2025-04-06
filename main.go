@@ -25,7 +25,7 @@ func main() {
 		userInput := myInput("Wanna roll the dice? (y/n): ")
 
 		if strings.Contains("yYyesYesYES", userInput) == true {
-			playerDiceRoll := rand.IntN(6)
+			playerDiceRoll := rand.IntN(7)
 			playerScore = playerScore + playerDiceRoll
 			fmt.Printf("Player Rolled: %d || Player Score: %d\n", playerDiceRoll, playerScore)
 			checkWinner(playerScore, botScore, maxScore)
@@ -67,12 +67,15 @@ func checkWinner(playerOneScore int, playerTwoScore int, maxScore int) {
 	if playerOneScore >= maxScore || playerTwoScore >= maxScore {
 		if playerOneScore > playerTwoScore {
 			fmt.Println("player won!")
+			time.Sleep(5 * time.Second)
 			os.Exit(0)
 		} else if playerTwoScore > playerOneScore {
 			fmt.Println("Bot won!")
+			time.Sleep(3 * time.Second)
 			os.Exit(0)
 		} else {
 			fmt.Println("It's a draw :(")
+			time.Sleep(3 * time.Second)
 			os.Exit(0)
 		}
 	}
